@@ -83,7 +83,7 @@
             
             <div class="form-group col-xs-6 col-md-6">
             <label for="operation" class="control-label col-xs-2 col-lg-2">Operation</label>
-              <select name="operation" class="form-control input-sm" id="operation">
+              <select name="operation" class="form-control input-sm" id="operation" required>
                         <option value="sum">Sum</option>
                         <option value="subtraction">Subtraction</option>
                         <option value="division">Division</option>
@@ -114,17 +114,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script>
 function response(n){
-    var objeto = JSON.parse(n);
-    if(objeto.Status == "OK"){
+    var obj = JSON.parse(n);
+    if(obj.Status == "OK"){
       $("#result").fadeOut();
-      $("#result").html(objeto.Result);
+      $("#result").html(obj.Result);
       $("#result").fadeIn();
     }else{
       $("#result").html("Error");
     }
 }
 function calculate(){
-  var url_ajax = "http://domain.uy/p/b.php";  
+  var url_ajax = "http://domain.uy/b.php";  
   var input1 = document.getElementById("input1").value;
   var input2 = document.getElementById("input2").value;
   var data_post = {
