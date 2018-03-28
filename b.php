@@ -29,8 +29,11 @@ if( isset($_POST['values']) && isset($_POST['operation']) && ((is_numeric($_POST
 	$json['Status'] = "error";
 }
 
-
 	header('Content-type: application/json; charset=utf-8');
     echo json_encode($json , JSON_FORCE_OBJECT);
     exit;
+
+    //Héctor Fernández
+    // Montevideo, Uruguay
+    // hectorfernandez02@gmail.com
 ?>
